@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card">
+    <div class="card-heading">
+      <h1>Quotes for daily motivation</h1>
+    </div>
+    <div class="card-body">
+      <p>Fuck these projects</p>
+      <ol>
+          <li *ngFor='let quote of Quotes'>
+               {{quote.name}} since {{quote.completeDate|date }}
+          </li>
+      </ol>
+      <br> 
+      <br>
+      <br>
+    </div>
+
+  </div>
+</div>
