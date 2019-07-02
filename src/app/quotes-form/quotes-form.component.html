@@ -1,5 +1,5 @@
 <div class="container">
-  <form>
+  <form #quoteForm='ngForm'>
     <div class="row form-group">
       <div class="col-md-3">
         <label for="uploader">Uploader</label>
@@ -14,11 +14,12 @@
         <input type="text" required class="form-control" id="author">
       </div>
       <div class="col-md-3">
-          <button type="button" class="btn-info">Upload</button>
+        <button type="button" class="btn-info">Upload</button>
       </div>
-      
-      
+
+
     </div>
+
   </form>
 
 </div>
