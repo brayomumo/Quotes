@@ -8,7 +8,7 @@ import { Quotes } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
 
-  Quotes: Quotes[] = [
+  Quotes = [
     new Quotes(1, 'quote1', new Date(21 / 6 / 2017)),
     new Quotes(2, 'quote 2', new Date(21 / 6 / 2017)),
     new Quotes(3, 'quote 3', new Date(21 / 6 / 2017)),
