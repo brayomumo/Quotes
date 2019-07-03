@@ -9,10 +9,18 @@
         <div class="card-body">
           <p class="centered">Get inspired for life</p>
           <ol>
-            <li *ngFor='let quote of Quotes'>
-              {{quote.name}} since {{quote.completeDate|date }}
-            </li>
+            <div>
+              <li *ngFor='let quote of Quotes'>
+                {{quote.name}} since {{quote.completeDate|date }} by {{quote.uploader}}<br>
+              </li><br> <br>
+              <app-quote-details [Quotes]='Quotes'></app-quote-details>
+            </div>
           </ol>
+          <div class="details">
+
+
+            <!-- <button (click)='quoteDelete(true)'>Remove Quote</button> -->
+          </div>
           <br>
           <br>
           <br>

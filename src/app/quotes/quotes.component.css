@@ -7,3 +7,8 @@
   text-align: center;
  color: maroon;
 }
+.pad-5
+{
+  padding: 10px;
+  margin: 10px;
+}
