@@ -1,25 +1,28 @@
-<div class="container">
-  <form >
+<div class="container-fluid">
+  <form (ngSubmit)='submitQuote()' #goalForm='ngForm'>
     <div class="row form-group">
       <div class="col-md-3">
         <label for="uploader">Uploader</label>
-        <input type="text" required class="form-control" id="uploader">
+        <input type="text" id='uploader' [(ngModel)]="newQuote.uploader" required class="form-control" name="uploader"
+          #uploader="ngModel">
       </div>
       <div class="col-md-3">
-        <label for="quote">Quote</label>
-        <input type="text" required class="form-control" id="quote">
+        <label for="name">Quote</label>
+        <!-- <input type="text" required class="form-control" id="quote"> -->
+        <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel"
+          required>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+          <p> Quote is Required</p>
+        </div>
       </div>
       <div class="col-md-3">
-        <label for="author">Author</label><br>
-        <input type="text" required class="form-control" id="author">
+        <label for="completeDate">Completion</label>
+        <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel"
+          required>
       </div>
       <div class="col-md-3">
         <button type="button" class="btn-info">Upload</button>
       </div>
-
-
     </div>
-
   </form>
-
 </div>

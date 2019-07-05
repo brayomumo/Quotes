@@ -1,1 +1,12 @@
-<p>quote-details works!</p>
+<div class="row">
+  <div class="col-md-6">
+    <p>This Quote was uploaded by {{Quotes.uploader}} </p>
+  </div>
+  <div class="col-md-6">
+    since {{Quotes.completeDate|date }}
+  </div>
+  <button  class="btn-success- pad-5" (click)='upVoted(true)'>Like it!!</button><br>
+  <button  class="btn-info pad-5" (click)='downVoted(true)'>Naah!! </button><br><br>
+  <button  class="btn-danger" (click)='quoteDelete(true)'>Delete</button><br>
+
+</div>
