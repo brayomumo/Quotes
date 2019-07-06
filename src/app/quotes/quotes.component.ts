@@ -27,16 +27,18 @@ export class QuotesComponent implements OnInit {
       // tslint:disable-next-line: prefer-const
       let toDelete = confirm(`Are you sure you want to delete this ${this.Quotes[index].name}`);
       if (toDelete) {
-        this.Quotes.splice(index, 1)
+        this.Quotes.splice(index, 1);
       }
     }
   }
-  addNewQuote(Quotes) {
+
+// tslint:disable-next-line: no-shadowed-variable
+  addNewQuote(Quotes: Quotes) {
 // tslint:disable-next-line: prefer-const
     let quoteLength = this.Quotes.length;
     Quotes.id = quoteLength + 1;
     Quotes.completeDate = new Date(Quotes.completeDate);
-    this.Quotes.push(Quotes)
+    this.Quotes.push(Quotes);
   }
 
   constructor() { }

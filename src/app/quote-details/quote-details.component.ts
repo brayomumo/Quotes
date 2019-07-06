@@ -17,10 +17,10 @@ export class QuoteDetailsComponent implements OnInit {
     this.isComplete.emit(complete);
   }
 
-  upVoted(complete:boolean){
-    
+  upVoted(complete: boolean) {
+
   }
-  downVoted(complete:boolean){
+  downVoted(complete: boolean) {
 
   }
   constructor() { }
