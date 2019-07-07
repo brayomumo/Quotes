@@ -12,14 +12,12 @@
             <div>
               <li *ngFor='let quote of quotes; let i = index' class="pad-5">
                 {{quote.name}}
-                <button class="btn-white textSize" (click)='togleDetails(i)'> show More</button><br>
-                <button class="btn-success textSize" (click)='quote.upvote = quote.upvote + 1'>Like it!!
+                <button class=" btn btn-primary textSize" (click)='togleDetails(i)'> show More</button><br>
+                <button class="btn-success textSize" (click)='quote.upvote = quote.upvote + 1'> Like it!!
                   {{ quote.upvote }}</button>
                 <button class="btn-info textSize" (click)='quote.downvote = quote.downvote + 1'>Naah!!
                   {{ quote.downvote }} </button>
-                <p>
-                  <app-votes></app-votes>
-                </p>
+
                 <app-quote-details *ngIf='quote.showUploader' [Quotes]='quote' (isComplete)='deleteQuote($event,i)'>
                 </app-quote-details>
               </li><br> <br>

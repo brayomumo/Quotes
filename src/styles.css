@@ -1,8 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css";
+@import "./assets/css/bootstrap.css";
+@import "./assets/css/fonts.css";
 
 button{
-  margin: 10px;
+  margin: 3px;
 }
 .textSize{
   font-size: 10px;
