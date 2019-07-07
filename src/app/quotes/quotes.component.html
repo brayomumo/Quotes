@@ -10,11 +10,14 @@
           <p class="centered">Get inspired for life</p>
           <ol>
             <div>
-              <li *ngFor='let quote of Quotes; let i = index'  class="pad-5">
+              <li *ngFor='let quote of quotes; let i = index' class="pad-5">
                 {{quote.name}}
                 <button class="btn-white" (click)='togleDetails(i)'> show More</button><br>
+                <button class="btn-success " (click)='upVoted()'>Like it!! {{ quote.upvote}}</button><br>
+                <button class="btn-info" (click)='downVoted()'>Naah!! {{quote.downvote}} </button><br><br>
 
-                <app-quote-details *ngIf='quote.showUploader' [Quotes]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+                <app-quote-details *ngIf='quote.showUploader' [Quotes]='quote' (isComplete)='deleteQuote($event,i)'>
+                </app-quote-details>
               </li><br> <br>
 
             </div>
@@ -26,7 +29,7 @@
     </div>
     <div class="col-md-6">
       <h2 class="centered">Add your favourite quote</h2>
-      <app-quotes-form (addGoal)= "addNewQuote($event)"></app-quotes-form>
+      <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
     </div>
   </div>
 

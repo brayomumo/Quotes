@@ -1,12 +1,9 @@
 <div class="row">
-  <div class="col-md-6">
+  <div class="col">
     <p>This Quote was uploaded by {{Quotes.uploader}} </p>
+     {{Quotes.completeDate|dateCount }} hours ago
   </div>
-  <div class="col-md-6">
-    since {{Quotes.completeDate|date }}
-  </div>
-  <button  class="btn-success- pad-5" (click)='upVoted(true)'>Like it!!</button><br>
-  <button  class="btn-info pad-5" (click)='downVoted(true)'>Naah!! </button><br><br>
+  
   <button  class="btn-danger" (click)='quoteDelete(true)'>Delete</button><br>
 
 </div>
