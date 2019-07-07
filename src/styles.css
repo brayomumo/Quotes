@@ -1,3 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css"
+@import "~bootstrap/dist/css/bootstrap.css";
 
+button{
+  margin: 10px;
+}
+.textSize{
+  font-size: 10px;
+}
+.centered
+{
+  text-align: center;
+}
+h1
+{
+  text-align: center;
+}

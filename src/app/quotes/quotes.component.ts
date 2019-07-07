@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Quotes } from '../quotes';
 
 
@@ -10,13 +10,15 @@ import { Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
 
   quotes = [
-    new Quotes (1, 'quote 1',  0 , 0, 0, 0, 'Brian', new Date(21 / 6 / 2017)),
-    new Quotes (2, 'quote 2',  0 , 0, 0, 0, 'Brian', new Date(21 / 6 / 2017)),
-    new Quotes (3, 'quote 3',  0 , 0, 0, 0, 'Brian', new Date(21 / 6 / 2017)),
-    new Quotes (4, 'quote 4',  0 , 0, 0, 0, 'Brian', new Date(21 / 6 / 2017)),
-    new Quotes (5, 'quote 5',  0 , 0, 0, 0, 'Brian', new Date(21 / 6 / 2017)),
-    new Quotes (6, 'quote 6',  0 , 0, 0, 0, 'Brian', new Date(21 / 6 / 2017)),
+// tslint:disable-next-line: max-line-length
+    new Quotes(1, 'Live as if you were to die tomorrow. Learn as if you were to live forever by  Mahatma Gandhi', 0, 0, 'Brian', new Date(7 / 7 / 2019)),
+    new Quotes(2, 'That which does not kill us makes us stronger by  Friedrich Nietzsche', 0, 0, 'Brian', new Date(7 / 7 / 2019)),
+// tslint:disable-next-line: max-line-length
+    new Quotes(3, 'We must not allow other people’s limited perceptions to define us by Virginia Satir', 0, 0, 'Brian', new Date(7 / 7 / 2019)),
+    new Quotes(4, 'If you cannot do great things, do small things in a great way by Napoleon Hill', 0, 0, 'Brian', new Date(7 / 7 / 2019)),
   ];
+
+
 
   togleDetails(index) {
     this.quotes[index].showUploader = !this.quotes[index].showUploader;
@@ -25,30 +27,23 @@ export class QuotesComponent implements OnInit {
   deleteQuote(isComplete, index) {
     if (isComplete) {
       // tslint:disable-next-line: prefer-const
-      let toDelete = confirm(`Are you sure you want to delete this ${this.quotes[index].name}`);
+      let toDelete = confirm(`Are you sure you want to delete quote ${this.quotes[index].id}`);
       if (toDelete) {
         this.quotes.splice(index, 1);
       }
     }
   }
 
-// tslint:disable-next-line: no-shadowed-variable
+  // tslint:disable-next-line: no-shadowed-variable
   addNewQuote(Quotes: Quotes) {
-// tslint:disable-next-line: prefer-const
+    // tslint:disable-next-line: prefer-const
     let quoteLength = this.quotes.length;
     Quotes.id = quoteLength + 1;
     Quotes.completeDate = new Date(Quotes.completeDate);
     this.quotes.push(Quotes);
   }
-  upVoted() {
-    let clicks = 0;
-    clicks = clicks + 1;
 
-  }
-  downVoted() {
-    let clicks = 0;
-    clicks = clicks - 1;
-  }
+
 
   constructor() { }
 

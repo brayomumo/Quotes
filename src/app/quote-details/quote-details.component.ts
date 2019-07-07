@@ -17,6 +17,19 @@ export class QuoteDetailsComponent implements OnInit {
     this.isComplete.emit(complete);
   }
 
+// // tslint:disable-next-line: member-ordering
+//   upVotes = this.Quotes.uvotes;
+// // tslint:disable-next-line: member-ordering
+//   downVotes = this.Quotes.dvotes;
+
+//   upVoted() {
+//     this.upVotes = this.upVotes + 1;
+//   }
+//   downVoted() {
+//     this.downVotes = this.upVotes + 1;
+//   }
+
+
 
   constructor() { }
 

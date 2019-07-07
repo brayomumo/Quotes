@@ -1,9 +1,11 @@
-<div class="row">
-  <div class="col">
+<div class="container">
+  <div class="details">
     <p>This Quote was uploaded by {{Quotes.uploader}} </p>
-     {{Quotes.completeDate|dateCount }} hours ago
+    {{Quotes.completeDate|dateCount }} hours ago
   </div>
-  
-  <button  class="btn-danger" (click)='quoteDelete(true)'>Delete</button><br>
-
+  <!-- <div class="container">
+    <button class="btn-success textSize" (click)='upVoted()'>Like it!! {{ upVotes }}</button>
+    <button class="btn-info textSize" (click)='downVoted()'>Naah!! {{ downVotes }} </button>
+  </div> -->
+  <button class="btn-danger" (click)='quoteDelete(true)'>Delete</button><br>
 </div>

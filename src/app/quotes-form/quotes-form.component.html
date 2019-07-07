@@ -1,13 +1,13 @@
 <div class="container-fluid">
   <div class="form-group">
     <form (ngSubmit)='submitQuote()' #goalForm='ngForm'>
-      <div class="row">
-        <div class="col-md-3">
+      <div class="centered">
+        <div >
           <label for="uploader">Uploader</label>
           <input type="text" id='uploader' [(ngModel)]="newQuote.uploader" required class="form-control" name="uploader"
             #uploader="ngModel">
         </div>
-        <div class="col-md-3">
+        <div >
           <label for="name">Quote</label>
           <!-- <input type="text" required class="form-control" id="quote"> -->
           <input type="text" class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel"
@@ -16,13 +16,13 @@
             <p> Quote is Required</p>
           </div>
         </div>
-        <div class="col-md-3">
+        <div>
 
-          <label for="completeDate">Completion</label>
+          <label for="completeDate">Submit date</label><br>
           <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate"
             #completeDate="ngModel" required>
         </div>
-        <div class="col-md-3">
+        <div >
           <button type="Submit" class="btn-info">Upload</button>
         </div>
       </div>
